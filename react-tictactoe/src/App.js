@@ -1,10 +1,13 @@
 import React from 'react';
 
 import Board from './components/Board';
+import './assets/css/app.css';
 
 function App() {
   return (
-    <Board />
+    <div className="container">
+      <Board />
+    </div>
   );
 }
 

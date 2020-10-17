@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './styles.css';
+import { Logo } from '../Logo';
 
 function Board() {
-  const [message, setMessage] = React.useState('');
+  const [message, setMessage] = React.useState('A grande batalha começou!');
   
   const [player, setPlayer] = React.useState('x');
   const [moves, setMoves] = React.useState(0);
@@ -52,14 +52,14 @@ function Board() {
     ];
   
     if (moves === board.length) {
-      return 'Empate';
+      return 'Foi um empate épico!';
     }
   
     for (let index = 0; index < winners.length; index++) {
       const [a, b, c] = winners[index];
   
       if (board[a] && board[a] === board[b] && board[b] === board[c]) {
-        return `Vencedor: ${board[a].toUpperCase()}`;
+        return `O grande vencedor é o ${board[a].toUpperCase()}`;
       }
     }
 
@@ -67,7 +67,8 @@ function Board() {
   }
 
   return (
-    <div className="container">
+    <div className="board">
+      <Logo />
       <div className="message">{message}</div>
 
       <table>
@@ -93,6 +94,7 @@ function Board() {
           )
         })}
       </table>
+      <button className='replay'>Replay</button>
     </div>
   )
 }
