@@ -71,7 +71,6 @@ body::before {
 }
 
 .board {
-  height: 100%;
   background-color: #fff;
   padding: 40px;
   border-radius: 2px;
