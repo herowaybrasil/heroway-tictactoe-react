@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Logo } from '../Logo';
+import Logo from '../Logo';
 
 function Board() {
   const [message, setMessage] = React.useState('A grande batalha começou!');
